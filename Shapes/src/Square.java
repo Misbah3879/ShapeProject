@@ -1,28 +1,28 @@
 public class Square extends Rectangle {
 	Rectangle s1=new Rectangle(3.0,6.0);
-	double side;
 	 public Square()
 	   {
 		 super();
-		 side=s1.getLength();
+		double side=2.0;
 	   }
 	 Square(double s)
 		{
-			side=s;
+			s=s;
 		}
  public Square( double width, double length ,String color, boolean filled,double si)
 	   {
 		   super( length,width,color, filled);
-		   side=si;
+		   si=si;
 	      }
 	   public double getSide()
 	   {
-		   return side;
+		   return width;
 	   }
 
 	   public void setSide(double s)
 	   {
-		   side=s;
+		   super.setLength(s);
+		   super.setWidth(s);
 	   }
 
 	   public double getArea()
@@ -32,10 +32,8 @@ public class Square extends Rectangle {
 
 	   public double getPerimeter()
 	   {
-	       return 4*getSide();
+	       return (4*getSide());
 	    }
-	  
-	  
 	   public String toString()
 	   {
 	      return "A Square with side = " + getSide() + ", which is a subclass of " + super.toString();
